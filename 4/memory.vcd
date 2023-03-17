@@ -1,0 +1,64 @@
+$date
+	Sun Feb 12 17:41:51 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module memory_tb $end
+$var wire 32 ! dataout [31:0] $end
+$var reg 32 " Datain [31:0] $end
+$var reg 1 # Writeen $end
+$var reg 5 $ address [4:0] $end
+$var reg 1 % clock $end
+$var reg 1 & mode $end
+$var reg 1 ' reset $end
+$scope module uut $end
+$var wire 32 ( Datain [31:0] $end
+$var wire 1 # Writeen $end
+$var wire 5 ) address [4:0] $end
+$var wire 1 % clock $end
+$var wire 1 & mode $end
+$var wire 1 ' reset $end
+$var reg 5 * data [4:0] $end
+$var reg 32 + dataout [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx +
+bx *
+bx )
+bx (
+1'
+0&
+0%
+bx $
+x#
+bx "
+bx !
+$end
+#10000
+1%
+b1 "
+b1 (
+1#
+0'
+#20000
+0%
+0#
+#30000
+1%
+#40000
+0%
+1&
+#50000
+1%
+#60000
+0%

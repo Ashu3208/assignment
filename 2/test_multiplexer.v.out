@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000201e20b6700 .scope module, "mymux" "mymux" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 3 "x";
+    .port_info 1 /INPUT 3 "y";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 3 "m";
+L_00000201e20b6b10 .functor NOT 3, L_00000201e1fd0ff0, C4<000>, C4<000>, C4<000>;
+o00000201e1fd7168 .functor BUFZ 3, C4<zzz>; HiZ drive
+L_00000201e20b70b0 .functor AND 3, o00000201e1fd7168, L_00000201e20b6b10, C4<111>, C4<111>;
+o00000201e1fd7198 .functor BUFZ 3, C4<zzz>; HiZ drive
+L_00000201e20b7210 .functor AND 3, o00000201e1fd7198, L_00000201e1fd0690, C4<111>, C4<111>;
+L_00000201e20be1f0 .functor OR 3, L_00000201e20b70b0, L_00000201e20b7210, C4<000>, C4<000>;
+v00000201e20b6890_0 .net *"_ivl_0", 2 0, L_00000201e1fd0ff0;  1 drivers
+L_00000201e201fc70 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000201e20b6930_0 .net *"_ivl_11", 1 0, L_00000201e201fc70;  1 drivers
+v00000201e20b69d0_0 .net *"_ivl_12", 2 0, L_00000201e20b7210;  1 drivers
+L_00000201e201fc28 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v00000201e20b6a70_0 .net *"_ivl_3", 1 0, L_00000201e201fc28;  1 drivers
+v00000201e20bdd00_0 .net *"_ivl_4", 2 0, L_00000201e20b6b10;  1 drivers
+v00000201e20bdda0_0 .net *"_ivl_6", 2 0, L_00000201e20b70b0;  1 drivers
+v00000201e20bde40_0 .net *"_ivl_8", 2 0, L_00000201e1fd0690;  1 drivers
+v00000201e20bdee0_0 .net "m", 2 0, L_00000201e20be1f0;  1 drivers
+o00000201e1fd7138 .functor BUFZ 1, C4<z>; HiZ drive
+v00000201e20bdf80_0 .net "s", 0 0, o00000201e1fd7138;  0 drivers
+v00000201e20be0b0_0 .net "x", 2 0, o00000201e1fd7168;  0 drivers
+v00000201e20be150_0 .net "y", 2 0, o00000201e1fd7198;  0 drivers
+L_00000201e1fd0ff0 .concat [ 1 2 0 0], o00000201e1fd7138, L_00000201e201fc28;
+L_00000201e1fd0690 .concat [ 1 2 0 0], o00000201e1fd7138, L_00000201e201fc70;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "test_multiplexer.v";
